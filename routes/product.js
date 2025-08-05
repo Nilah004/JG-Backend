@@ -294,6 +294,8 @@ router.put("/:id", upload.single("image"), async (req, res) => {
     console.error("❌ Update Error:", err)
     res.status(500).json({ success: false, error: "Failed to update product", details: err.message })
   }
+
+  
 })
 
 // ✅ Delete Product
@@ -315,3 +317,5 @@ router.delete("/:id", async (req, res) => {
 })
 
 module.exports = router
+
+
